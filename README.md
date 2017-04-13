@@ -25,29 +25,36 @@ You can view your defaults in the `gcloud` command-line tool by running the foll
 
  Create a new project named `cpx-project` by y clicking "CREATE PROJECT" under "All Projects"
 
-![image](/img/create-project.png?raw=true)
+![](/img/create-project.png?raw=true)
  
  Under **Home**   
-![](https://bookworm.americasreadiness.com/uploads/images/gallery/2017-04-Apr/scaled-840-0/image-1491944155962.png) 
+![](/img/home.png?raw=true) 
 
-click on **Go to APIs overview** .  
-![](https://bookworm.americasreadiness.com/uploads/images/gallery/2017-04-Apr/scaled-840-0/image-1491944229526.png)  
+click on **Go to APIs overview**
+
+![](/img/APIs.png?raw=true)  
 
 and click on **Enable API.**
 
-![](https://bookworm.americasreadiness.com/uploads/images/gallery/2017-04-Apr/scaled-840-0/image-1491944278322.png)
+![](/img/enable-api.png?raw=true)
 
 and then navigate to **Container Enginer API.**
-![](https://bookworm.americasreadiness.com/uploads/images/gallery/2017-04-Apr/scaled-840-0/image-1491944333165.png)  
+
+![](/img/container-engine-api.png?raw=true)  
 
 And then click **Enable**
-![](https://bookworm.americasreadiness.com/uploads/images/gallery/2017-04-Apr/scaled-840-0/image-1491944379028.png)
+
+![](/img/enable-api-1.png?raw=true)
 
 You may have to wait a few moments until the Google Cloud Shell recognizes the enabled API setting. To create a cluster enter the following in Google Cloud Shell. This step can take a few minutes to complete
 
     gcloud container clusters create cpx-demo
 
-Under Google Compute Engine, you can see your virtual machines that make up your kube cluster be provisioned. ![](https://bookworm.americasreadiness.com/uploads/images/gallery/2017-04-Apr/scaled-840-0/image-1491944835346.png) Ensure kubectl has authentication credentials. Agree and follow the instructions to retrieve the validation code. 
+Under Google Compute Engine, you can see your virtual machines that make up your kube cluster be provisioned. 
+
+![](/img/vm-instances.png?raw=true) 
+
+Ensure kubectl has authentication credentials. Agree and follow the instructions to retrieve the validation code. 
 
     gcloud auth application-default login
 
@@ -113,7 +120,9 @@ Now create the cpx deamonset using kubectl.
     kube-system nscpx-g8mhk                                                     1/1  Running     0     23s  
     kube-system nscpx-kcbxl                                                     1/1  Running     0     23s
 
-To validate, you can SSH into any host in your cluster and execute CLI commands on the CPX to show all LB vServers automatically configured for your services running on the Kubernetes cluster. First SSH into a Kubernetes minion via Google Cloud Console under Compute Engine. ![](https://bookworm.americasreadiness.com/uploads/images/gallery/2017-04-Apr/scaled-840-0/image-1491954854650.png)
+To validate, you can SSH into any host in your cluster and execute CLI commands on the CPX to show all LB vServers automatically configured for your services running on the Kubernetes cluster. First SSH into a Kubernetes minion via Google Cloud Console under Compute Engine. 
+
+![](/img/ssh-instance.png?raw=true)
 
 You will then be connecting to the VM's console directly where you can enter in the `docker ps` command to show all running containers on the host. Container **4b2ec1ed8cd6** is the CPX container we provisioned on this host via daemonset.
 
