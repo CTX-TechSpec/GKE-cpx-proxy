@@ -102,9 +102,9 @@ Now create the cpx deamonset using kubectl.
     kube-system kube-proxy-gke-cpx-demo-default-pool-509e7c0e-lr0q              1/1  Running     0     1h  
     kube-system kubernetes-dashboard-3543765157-x6fj3                           1/1  Running     0     1h  
     kube-system l7-default-backend-2234341178-246vm                             1/1  Running     0     1h  
-    **kube-system nscpx-f6ng1                                                     1/1  Running     0     23s**  
-    **kube-system nscpx-g8mhk                                                     1/1  Running     0     23s**  
-    **kube-system nscpx-kcbxl                                                     1/1  Running     0     23s**</pre>
+    kube-system nscpx-f6ng1                                                     1/1  Running     0     23s  
+    kube-system nscpx-g8mhk                                                     1/1  Running     0     23s  
+    kube-system nscpx-kcbxl                                                     1/1  Running     0     23s
 
 To validate, you can SSH into any host in your cluster and execute CLI commands on the CPX to show all LB vServers automatically configured for your services running on the Kubernetes cluster. First SSH into a Kubernetes minion via Google Cloud Console under Compute Engine. ![](https://bookworm.americasreadiness.com/uploads/images/gallery/2017-04-Apr/scaled-840-0/image-1491954854650.png)
 
@@ -113,7 +113,7 @@ You will then be connecting to the VM's console directly where you can enter in 
     $ docker ps   
     >>  
     **CONTAINER ID IMAGE                                                                     COMMAND               CREATED          STATUS          PORTS     NAMES**  
-    4b2ec1ed8cd6 <span style="background-color: #ffff00;">registry.americasreadiness.com:5000/cpx:11.1-48.10 </span>                       "/bin/sh -c -- 'bash " 58 minutes ago   Up 58 minutes            k8s_nscpx.d8e54545_nscpx-g8mhk_kube-system_1943408e-1f0a-11e7-9341-42010a800fc1_ec1529ba  
+    4b2ec1ed8cd6 registry.americasreadiness.com:5000/cpx:11.1-48.10                       "/bin/sh -c -- 'bash " 58 minutes ago   Up 58 minutes            k8s_nscpx.d8e54545_nscpx-g8mhk_kube-system_1943408e-1f0a-11e7-9341-42010a800fc1_ec1529ba  
     f95860685be0 gcr.io/google_containers/pause-amd64:3.0                                  "/pause"               58 minutes ago   Up 58 minutes            k8s_POD.d8dbe16c_nscpx-g8mhk_kube-system_1943408e-1f0a-11e7-9341-42010a800fc1_d9583291  
     8852b25f2c25 gcr.io/google_containers/exechealthz-amd64:1.2                            "/exechealthz '--cmd=" 2 hours ago      Up 2 hours               k8s_healthz.eb183f86_kube-dns-2185667875-dt6h3_kube-system_b0bfe64c-1efa-11e7-9341-42010a800fc1_f063ec6f  
     7f820710814c gcr.io/google_containers/dnsmasq-metrics-amd64:1.0.1                      "/dnsmasq-metrics --v" 2 hours ago      Up 2 hours               k8s_dnsmasq-metrics.53491f17_kube-dns-2185667875-dt6h3_kube-system_b0bfe64c-1efa-11e7-9341-42010a800fc1_1bbd304e  
@@ -419,30 +419,30 @@ Now if you SSH back into any of the minons in the Kubernetes Cluster, you can ag
      DBS_LB: DISABLED  
      Process Local: DISABLED  
      Traffic Domain: 0  
-    **6) cpx-blog.default (192.168.1.2:29994) - TCP Type: ADDRESS**   
-     **State: UP**  
-     **Last state change was at Thu Apr 13 19:57:49 2017**  
-     **Time since last state change: 0 days, 00:03:34.30**  
-     **Effective State: UP**  
-     **Client Idle Timeout: 9000 sec**  
-     **Down state flush: ENABLED**  
-     **Disable Primary Vserver On Down : DISABLED**  
-     **Appflow logging: ENABLED**  
-     **No. of Bound Services : 3 (Total) 3 (Active)**  
-     **Configured Method: ROUNDROBIN BackupMethod: NONE**  
-     **Mode: IP**  
-     **Persistence: NONE**  
-     **Connection Failover: DISABLED**  
-     **L2Conn: OFF**  
-     **Skip Persistency: None**  
-     **Listen Policy: NONE**  
-     **IcmpResponse: PASSIVE**  
-     **RHIstate: PASSIVE**  
-     **New Service Startup Request Rate: 0 PER_SECOND, Increment Interval: 0**  
-     **Mac mode Retain Vlan: DISABLED**  
-     **DBS_LB: DISABLED**  
-     **Process Local: DISABLED**  
-     **Traffic Domain: 0
+    6) cpx-blog.default (192.168.1.2:29994) - TCP Type: ADDRESS**   
+     State: UP**  
+     Last state change was at Thu Apr 13 19:57:49 2017**  
+     Time since last state change: 0 days, 00:03:34.30**  
+     Effective State: UP**  
+     Client Idle Timeout: 9000 sec**  
+     Down state flush: ENABLED**  
+     Disable Primary Vserver On Down : DISABLED**  
+     Appflow logging: ENABLED**  
+     No. of Bound Services : 3 (Total) 3 (Active)**  
+     Configured Method: ROUNDROBIN BackupMethod: NONE**  
+     Mode: IP**  
+     Persistence: NONE**  
+     Connection Failover: DISABLED**  
+     L2Conn: OFF**  
+     Skip Persistency: None**  
+     Listen Policy: NONE**  
+     IcmpResponse: PASSIVE**  
+     RHIstate: PASSIVE**  
+     New Service Startup Request Rate: 0 PER_SECOND, Increment Interval: 0**  
+     Mac mode Retain Vlan: DISABLED**  
+     DBS_LB: DISABLED**  
+     Process Local: DISABLED**  
+     Traffic Domain: 0
 
 ### Conclusion
 
