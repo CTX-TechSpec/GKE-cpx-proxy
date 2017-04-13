@@ -2,7 +2,7 @@
 
 logon to GCE console from [https://console.cloud.google.com](https://console.cloud.google.com). 
 
-Use Google Cloud Shell to interact with `kubectl` immediately, use the [Google Cloud Shell](https://cloud.google.com/shell/docs/), which comes preinstalled with the `gcloud` and `kubectl` command-line tools. Follow these steps to launch the Google Cloud Shell:
+Use Google Cloud Shell to interact with `kubectl` immediately, use the ![Google Cloud Shell](/img/shell_icon.png?raw=true), which comes preinstalled with the `gcloud` and `kubectl` command-line tools. Follow these steps to launch the Google Cloud Shell:
 
 Go to [Google Cloud Platform Console](https://console.cloud.google.com/?_ga=1.126719242.621469569.1491942438). Click the **Activate Google Cloud Shell** button at the top of the console window.[Google Cloud Platform console](https://cloud.google.com/shell/docs/images/shell_icon.png)
 
