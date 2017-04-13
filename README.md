@@ -83,7 +83,7 @@ Run `kubectl get nodes` to get the names of your cluster’s nodes. Pick out the
 
 #### Step Two: Create a CPX [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)
 
-Create the yaml file in the editor of your choice which will be used to deploy cpx pod on each node with the lable `nscpx`.Save the file `nscpx.yaml` to `/tmp` directory. Here is the [nscpx.yaml](https://bookworm.americasreadiness.com/attachments/2) which holds the contents of our deamonset.
+Create the yaml file in the editor of your choice which will be used to deploy cpx pod on each node with the lable `nscpx`.Save the file `nscpx.yaml` to `/tmp` directory. Here is the [nscpx.yaml](/yaml/nscpx.yaml) which holds the contents of our deamonset.
 
 > Remeber to update the **kubernetes_url** value in the nscpx.yaml file to your Kubernetes API URL noted from above. 
 
@@ -280,7 +280,7 @@ You can enter the container's CLI and check via NS CLI commands configured Load 
 
 #### Step Three: Deploy additional services on Kubernetes
 
-Now we will deploy additional pods and services on Kubernetes and witness them be automatically detected and configured on CPX. First we will create our yaml file defining replica-controllers for the desired blog site. Use nano or your desired text editor to create [cpx-blog-rc.yaml](https://bookworm.americasreadiness.com/attachments/5) file in `/tmp`. Then create a replication controller with the following command using kubctl on our Google Cloud Shell.
+Now we will deploy additional pods and services on Kubernetes and witness them be automatically detected and configured on CPX. First we will create our yaml file defining replica-controllers for the desired blog site. Use nano or your desired text editor to create [cpx-blog-rc.yaml](/yaml/cpx-blog-rc.yaml) file in `/tmp`. Then create a replication controller with the following command using kubctl on our Google Cloud Shell.
 
     $ kubectl create -f /tmp/cpx-blog-rc.yaml   
     >>  
@@ -294,7 +294,7 @@ Now we will deploy additional pods and services on Kubernetes and witness them b
     cpx-blog-6xk62    1/1   Running     0     9s  
     cpx-blog-plz8c    1/1   Running     0     9s
 
-Now we will create our yaml file defining container services hosting a blog site. Use nano or your desired text editor to create [cpx-blog-srvc.yaml](https://bookworm.americasreadiness.com/attachments/4) file in `/tmp`.  Then create a replication controller with the following command using kubctl on our Google Cloud Shell.
+Now we will create our yaml file defining container services hosting a blog site. Use nano or your desired text editor to create [cpx-blog-srvc.yaml](/yaml/cpx-blog-srvc.yaml) file in `/tmp`.  Then create a replication controller with the following command using kubctl on our Google Cloud Shell.
 
     $ kubectl create -f cpx-blog-srvc.yaml   
     >>  
