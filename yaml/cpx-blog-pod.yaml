@@ -1,0 +1,21 @@
+apiVersion: v1
+
+kind: ReplicationController
+metadata:
+  name: cpx-blog
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    app: cpx-blog
+  template:
+    metadata:
+      name: cpx-blog
+      labels:
+        app: cpx-blog
+    spec:
+      containers:
+      - name: cpx-blog-site
+        image: registry.americasreadiness.com:5000/cpx-blog
+        ports:
+        - containerPort: 80

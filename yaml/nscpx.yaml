@@ -1,0 +1,42 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: nscpx
+  namespace: kube-system
+spec:
+  template:
+    metadata:
+      labels:
+        app: nscpx
+    spec:
+      nodeSelector:
+        proxy: nscpx
+      hostNetwork: true
+      containers:
+        - name: nscpx
+          image: registry.americasreadiness.com:5000/cpx:11.1-48.10
+          env:
+          - name: NS_NETMODE
+            value: "HOST"
+          - name: kubernetes_url
+            value: "https://104.198.206.231/api"
+          - name: kube_config
+            value: "/var/lib/kube-proxy/kubeconfig"
+          - name: EULA
+            value: "yes"
+          volumeMounts:
+          - mountPath: /var/lib/kube-proxy/kubeconfig
+            name: kubeconfig
+          - mountPath: /etc/ssl/certs
+            name: sslcerts
+          command: [ "/bin/sh", "-c", "--" ]
+          args: [ "bash -C '/var/netscaler/bins/docker_startup.sh'; tail -f /dev/null" ]
+          securityContext:
+            privileged: true
+      volumes:
+      - name: kubeconfig
+        hostPath:
+          path: /var/lib/kube-proxy/kubeconfig
+      - name: sslcerts
+        hostPath:
+          path: /usr/share/ca-certificates
