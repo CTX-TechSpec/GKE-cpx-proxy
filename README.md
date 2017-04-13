@@ -62,7 +62,7 @@ Enter the following to validate kubectl is working properly:
 
     kubectl version   
     kubectl cluster-info  
-    kubectl</span> get nodes 
+    kubectl get nodes 
 
 Note down your Kubernetes Master URL from the `kubectl cluster-info` command. Mine showed that the Kubernetes master was running at https://104.198.206.231
 
