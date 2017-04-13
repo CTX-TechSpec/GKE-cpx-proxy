@@ -2,11 +2,18 @@
 
 logon to GCE console from [https://console.cloud.google.com](https://console.cloud.google.com). 
 
-Use Google Cloud Shell to interact with `kubectl` immediately, use the ![Google Cloud Shell](/img/shell_icon.png?raw=true), which comes preinstalled with the `gcloud` and `kubectl` command-line tools. Follow these steps to launch the Google Cloud Shell:
+Use Google Cloud Shell to interact with `kubectl` immediately, use the Google Cloud Shell, which comes preinstalled with the `gcloud` and `kubectl` command-line tools. Follow these steps to launch the Google Cloud Shell:
 
-Go to [Google Cloud Platform Console](https://console.cloud.google.com/?_ga=1.126719242.621469569.1491942438). Click the **Activate Google Cloud Shell** button at the top of the console window.[Google Cloud Platform console](https://cloud.google.com/shell/docs/images/shell_icon.png)
+![Google Cloud Shell](/img/shell_icon.png?raw=true)
 
-A Cloud Shell session opens inside a new frame at the bottom of the console and displays a command-line prompt.![Cloud Shell session](https://cloud.google.com/shell/docs/images/new-console.png) Set a default [Compute Engine zone](https://cloud.google.com/compute/docs/zones#available). The following command sets the default zone as `us-central1-b`: 
+Go to [Google Cloud Platform Console](https://console.cloud.google.com/?_ga=1.126719242.621469569.1491942438). Click the **Activate Google Cloud Shell** button at the top of the console window.
+
+[Google Cloud Platform console](https://cloud.google.com/shell/docs/images/shell_icon.png)
+
+A Cloud Shell session opens inside a new frame at the bottom of the console and displays a command-line prompt.
+![Cloud Shell session](/img/shell_icon.png?raw=true) 
+
+Set a default [Compute Engine zone](https://cloud.google.com/compute/docs/zones#available). The following command sets the default zone as `us-central1-b`: 
 
     gcloud config set compute/zone us-central1-b
 
