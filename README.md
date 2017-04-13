@@ -68,6 +68,8 @@ Note down your Kubernetes Master URL from the `kubectl cluster-info` command. Mi
 
 ### Provision CPX for KubeProxy in Kubernetes Cluster
 
+> Note that the following steps from here on are not unique to Kubernetes in GKE. The following instructions are applicable to any Kuberentes deployment where CPX is desired to function with the kube proxy role for internal microservices load-balancing. 
+
 #### Step One: Attach label to the node
 
 Run `kubectl get nodes` to get the names of your cluster’s nodes. Pick out the one that you want to add a label to. In our case, we will assign a lable to all nodes to specify all nodes in the cluster will host CPX.Run `kubectl label nodes <node-name> <label-key>=<label-value>` to add a label to the nodes you’ve chosen. For example,  I ran 
