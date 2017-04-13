@@ -153,7 +153,7 @@ You can enter the container's CLI and check via NS CLI commands configured Load 
     
     docker exec -it 4b2ec1ed8cd6 /bin/bash
     >>   
-    # **cli_script.sh "sh lb vservers"**   
+    # cli_script.sh "sh lb vservers"
     >>  
     exec: sh lb vservers  
     1) default-http-backend.kube-system (192.168.1.2:29999) - TCP Type: ADDRESS   
@@ -311,9 +311,9 @@ Now if you SSH back into any of the minons in the Kubernetes Cluster, you can ag
 
 >Note that vserver #6 is the additional vserver autodiscovered and configured.
 
-    $ **docker exec -it 4b2ec1ed8cd6 /bin/bash**  
+    $ docker exec -it 4b2ec1ed8cd6 /bin/bash 
     >>   
-    # **cli_script.sh "sh lb vservers"**   
+    # cli_script.sh "sh lb vservers"   
     >>  
     exec: sh lb vservers  
     1) default-http-backend.kube-system (192.168.1.2:29999) - TCP Type: ADDRESS   
