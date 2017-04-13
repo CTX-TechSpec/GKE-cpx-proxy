@@ -6,12 +6,10 @@ Use Google Cloud Shell to interact with `kubectl` immediately, use the Google Cl
 
 ![Google Cloud Shell](/img/shell_icon.png?raw=true)
 
-Go to [Google Cloud Platform Console](https://console.cloud.google.com/?_ga=1.126719242.621469569.1491942438). Click the **Activate Google Cloud Shell** button at the top of the console window.
+Go to [Google Cloud Platform Console](https://console.cloud.google.com/?_ga=1.126719242.621469569.1491942438). Click the **Activate Google Cloud Shell** button at the top of the console window. A Cloud Shell session opens inside a new frame at the bottom of the console and displays a command-line prompt.
 
-[Google Cloud Platform console](https://cloud.google.com/shell/docs/images/shell_icon.png)
+![Google Cloud Platform console](/img/new-console.png?raw=true)
 
-A Cloud Shell session opens inside a new frame at the bottom of the console and displays a command-line prompt.
-![Cloud Shell session](/img/shell_icon.png?raw=true) 
 
 Set a default [Compute Engine zone](https://cloud.google.com/compute/docs/zones#available). The following command sets the default zone as `us-central1-b`: 
 
@@ -25,7 +23,9 @@ You can view your defaults in the `gcloud` command-line tool by running the foll
 
     gcloud config set compute/zone us-central1-b
 
- Create a new project named `cpx-project` by y clicking "CREATE PROJECT" under "All Projects "![sample](https://bookworm.americasreadiness.com/uploads/images/gallery/2017-04-Apr/scaled-840-0/image-1491943868159.png)
+ Create a new project named `cpx-project` by y clicking "CREATE PROJECT" under "All Projects"
+
+![image](/img/create-project.png?raw=true)
  
  Under **Home**   
 ![](https://bookworm.americasreadiness.com/uploads/images/gallery/2017-04-Apr/scaled-840-0/image-1491944155962.png) 
