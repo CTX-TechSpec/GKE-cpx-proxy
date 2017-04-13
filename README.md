@@ -437,29 +437,29 @@ Now if you SSH back into any of the minons in the Kubernetes Cluster, you can ag
      DBS_LB: DISABLED  
      Process Local: DISABLED  
      Traffic Domain: 0  
-    6) cpx-blog.default (192.168.1.2:29994) - TCP Type: ADDRESS**   
-     State: UP**  
-     Last state change was at Thu Apr 13 19:57:49 2017**  
-     Time since last state change: 0 days, 00:03:34.30**  
-     Effective State: UP**  
-     Client Idle Timeout: 9000 sec**  
-     Down state flush: ENABLED**  
-     Disable Primary Vserver On Down : DISABLED**  
-     Appflow logging: ENABLED**  
-     No. of Bound Services : 3 (Total) 3 (Active)**  
-     Configured Method: ROUNDROBIN BackupMethod: NONE**  
-     Mode: IP**  
-     Persistence: NONE**  
-     Connection Failover: DISABLED**  
-     L2Conn: OFF**  
-     Skip Persistency: None**  
-     Listen Policy: NONE**  
-     IcmpResponse: PASSIVE**  
-     RHIstate: PASSIVE**  
-     New Service Startup Request Rate: 0 PER_SECOND, Increment Interval: 0**  
-     Mac mode Retain Vlan: DISABLED**  
-     DBS_LB: DISABLED**  
-     Process Local: DISABLED**  
+    6) cpx-blog.default (192.168.1.2:29994) - TCP Type: ADDRESS   
+     State: UP
+     Last state change was at Thu Apr 13 19:57:49 2017
+     Time since last state change: 0 days, 00:03:34.30 
+     Effective State: UP
+     Client Idle Timeout: 9000 sec
+     Down state flush: ENABLED
+     Disable Primary Vserver On Down : DISABLED
+     Appflow logging: ENABLED
+     No. of Bound Services : 3 (Total) 3 (Active)
+     Configured Method: ROUNDROBIN BackupMethod: NONE
+     Mode: IP
+     Persistence: NONE
+     Connection Failover: DISABLED
+     L2Conn: OFF
+     Skip Persistency: None
+     Listen Policy: NONE 
+     IcmpResponse: PASSIVE
+     RHIstate: PASSIVE
+     New Service Startup Request Rate: 0 PER_SECOND, Increment Interval: 0
+     Mac mode Retain Vlan: DISABLED
+     DBS_LB: DISABLED
+     Process Local: DISABLED
      Traffic Domain: 0
 
 ### Conclusion
