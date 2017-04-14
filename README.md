@@ -19,11 +19,12 @@ You can view your defaults in the `gcloud` command-line tool by running the foll
 
     gcloud config list
 
- Provision a Kubernetes ClusterFollow these steps to create a Kubernetes cluster in GCE. First Set a default [Compute Engine zone](https://cloud.google.com/compute/docs/zones#available). The following command sets the default zone as `us-central1-b` in Google Cloud Shell. 
+### Provision a Kubernetes Cluster
+First Set a default [Compute Engine zone](https://cloud.google.com/compute/docs/zones#available). The following command sets the default zone as `us-central1-b` in Google Cloud Shell. 
 
     gcloud config set compute/zone us-central1-b
 
- Create a new project named `cpx-project` by y clicking "CREATE PROJECT" under "All Projects"
+ Next, create a new project named `cpx-project` by y clicking "CREATE PROJECT" under "All Projects"
 
 ![](/img/create-project.png?raw=true)
  
