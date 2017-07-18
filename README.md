@@ -132,7 +132,7 @@ You will then be connecting to the VM's console directly where you can enter in 
     $ docker ps   
     >>  
     **CONTAINER ID IMAGE                                                                     COMMAND               CREATED          STATUS          PORTS     NAMES**  
-    4b2ec1ed8cd6 registry.americasreadiness.com:5000/cpx:11.1-48.10                       "/bin/sh -c -- 'bash " 58 minutes ago   Up 58 minutes            k8s_nscpx.d8e54545_nscpx-g8mhk_kube-system_1943408e-1f0a-11e7-9341-42010a800fc1_ec1529ba  
+    4b2ec1ed8cd6 store/citrix/netscalercpx:12.0-41.16                                      "/bin/sh -c -- 'bash " 58 minutes ago   Up 58 minutes            k8s_nscpx.d8e54545_nscpx-g8mhk_kube-system_1943408e-1f0a-11e7-9341-42010a800fc1_ec1529ba  
     f95860685be0 gcr.io/google_containers/pause-amd64:3.0                                  "/pause"               58 minutes ago   Up 58 minutes            k8s_POD.d8dbe16c_nscpx-g8mhk_kube-system_1943408e-1f0a-11e7-9341-42010a800fc1_d9583291  
     8852b25f2c25 gcr.io/google_containers/exechealthz-amd64:1.2                            "/exechealthz '--cmd=" 2 hours ago      Up 2 hours               k8s_healthz.eb183f86_kube-dns-2185667875-dt6h3_kube-system_b0bfe64c-1efa-11e7-9341-42010a800fc1_f063ec6f  
     7f820710814c gcr.io/google_containers/dnsmasq-metrics-amd64:1.0.1                      "/dnsmasq-metrics --v" 2 hours ago      Up 2 hours               k8s_dnsmasq-metrics.53491f17_kube-dns-2185667875-dt6h3_kube-system_b0bfe64c-1efa-11e7-9341-42010a800fc1_1bbd304e  
